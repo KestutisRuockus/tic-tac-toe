@@ -20,16 +20,15 @@
 }
 
 .square:hover {
-  opacity: 0.8;
   cursor: pointer;
 }
 
-.winner-window {
+.winner-element {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: darkred;
+  background-color: green;
   color: white;
   font-size: 40px;
   font-weight: bold;
@@ -42,7 +41,7 @@
   display: none;
 }
 
-.winner-window button {
+.winner-element button {
   width: 130px;
   height: 40px;
   font-size: 18px;
@@ -50,6 +49,6 @@
   border-radius: 8px;
 }
 
-.winner-window button:hover {
+.winner-element button:hover {
   cursor: pointer;
 }
