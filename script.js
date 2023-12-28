@@ -6,11 +6,13 @@ function markSymbol(id) {
   if (document.getElementById(`${id}`).value === undefined) {
     if (player === 1) {
       document.getElementById("player").innerText = "2";
+      document.getElementById(id).style.color = "red";
       changeMarkSymbol(id);
       checkOrPlayerIsAWinner();
       playertwoProperties();
     } else {
       document.getElementById("player").innerText = "1";
+      document.getElementById(id).style.color = "green";
       changeMarkSymbol(id);
       checkOrPlayerIsAWinner();
       playerOneProperties();
@@ -95,11 +97,21 @@ function checkOrPlayerIsAWinner() {
     if (three !== undefined || five !== undefined || seven !== undefined)
       showWhoIsWinner();
   }
+
+  // check or there is empty element
+  if (one && two && three && four && five && six && seven && eight && nine)
+    thereIsNoWinner();
 }
 
 // dispplay modal element
 function showWhoIsWinner() {
   document.getElementById("winner").innerText = player;
+  document.querySelector(".winner-element").style.display = "block";
+}
+
+// display modal when there is no winner
+function thereIsNoWinner() {
+  document.getElementById("modal").innerHTML = `Sorry, there is no winner`;
   document.querySelector(".winner-element").style.display = "block";
 }
 

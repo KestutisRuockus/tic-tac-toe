@@ -1,3 +1,7 @@
+body {
+  background-image: linear-gradient(to right, lightslategray, lightseagreen);
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -12,11 +16,12 @@
 .square {
   width: 150px;
   height: 150px;
-  background-color: darkgoldenrod;
+  background-color: black;
   margin: 5px;
   font-size: 140px;
   text-align: center;
   border-radius: 8px;
+  color: white;
 }
 
 .square:hover {
@@ -28,7 +33,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: green;
+  background-color: cadetblue;
   color: white;
   font-size: 40px;
   font-weight: bold;
